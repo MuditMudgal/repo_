@@ -1,1 +1,28 @@
 https://leetcode.com/problems/palindrome-number/submissions/1765319084/
+
+class Solution {
+public:
+    bool isPalindrome(int n) {
+        
+        // x = 1234
+        int temp = n;
+
+        long long m = 0;
+        int rev = 0;
+        while(n>0)
+        {
+            rev=n%10;
+            n=n/10;
+            m=m*10+rev;
+            
+        }
+
+        if(m==temp){
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+};
